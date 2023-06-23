@@ -2,8 +2,9 @@
 
 const express= require("express");
 const bodyParser= require("body-parser");
-const request= require("request");
+const request=require("request");
 const https = require("https");
+
 const app=express();
 
 app.use(express.static("public"))
@@ -33,11 +34,11 @@ app.post("/",function(req,res){
     };
     const JsonData=JSON.stringify(data);
 
-
+   
     const url="https://us21.api.mailchimp.com/3.0/lists/c637981767";
     const option={
         method:"post",
-        auth:"arabz:f266bbee0940ce609b53049c23366b0d-us21"
+        auth:"arabz:383e97cf5aad03c2b7b7ab08a1c03947-us21"
     }
 
    const request= https.request(url,option,function(response){
@@ -62,6 +63,7 @@ app.post("/",function(req,res){
 app.post("/failure",function(req,res){  
     res.redirect("/");
 });
+
 
 app.listen(process.env.PORT || 3000 ,function(){
     console.log("sever is running on 3000");
