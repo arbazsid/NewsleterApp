@@ -129,5 +129,3 @@ dist
 .yarn/install-state.gz
 .pnp.*
 
-#auth
-auth:"arabz: 045864ba7789393c8800fb0780c1693f-us21"
