@@ -38,7 +38,7 @@ app.post("/",function(req,res){
     const url="https://us21.api.mailchimp.com/3.0/lists/c637981767";
     const option={                                      
         method:"POST",
-        auth:"arabz:7580c9c86670ccdd5c571b43eef72dbe-us21"
+        auth:"arabz:9f8bdd00a9c857581f82969db3bafba1-us21"
     }
 
    const request= https.request(url,option,function(response){
@@ -65,7 +65,7 @@ app.post("/failure",function(req,res){
 });
 
 
-app.listen(process.env.PORT ,function(){
+app.listen(process.env.PORT || 3000,function(){
     console.log("sever is running on 3000");
 });
 
